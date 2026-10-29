@@ -1,4 +1,4 @@
-const OrderRead = () => {
+const OrderRead = ({orders}) => {
     return (
       <>
       <table border={1}>
@@ -11,13 +11,13 @@ const OrderRead = () => {
         </thead>
         <tbody>
           {
-            orders.map((e,i) => {
+            orders.map((e,i) => 
               <tr key={i}>
                 <td>{e.id}</td>
                 <td>{e.item}</td>
                 <td>{e.total}</td>
               </tr>
-            })
+            )
           }
         </tbody>
         </table>

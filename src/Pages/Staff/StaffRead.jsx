@@ -1,4 +1,4 @@
-const StaffRead = () => {
+const StaffRead = ({staffs}) => {
     return (
       <>
       <table border={1}>
@@ -11,13 +11,13 @@ const StaffRead = () => {
         </thead>
         <tbody>
           {
-            staffs.map((e,i) => {
+            staffs.map((e,i) => 
               <tr key={i}>
                 <td>{e.id}</td>
                 <td>{e.name}</td>
                 <td>{e.phone}</td>
               </tr>
-            })
+            )
           }
         </tbody>
         </table>
