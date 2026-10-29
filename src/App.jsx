@@ -9,6 +9,11 @@ import MenuUpdate from './Pages/Menu/menuUpdate'
 import MenuDelete from './Pages/Menu/menuDelete'
 import Admin from './Pages/Admin/Admin'
 import Menu from './Pages/Menu/Menu'
+import Stock from './Pages/Stock/Stock'
+import StockRead from './Pages/Stock/StockRead'
+import StockCreate from './Pages/Stock/StockCreate'
+import StockUpdate from './Pages/Stock/StockUpdate'
+import StockDelete from './Pages/Stock/StockDelete'
 
 
 function App() {
@@ -56,17 +61,17 @@ function App() {
       <Route path="menuUpdate" element={<MenuUpdate menus={menus} setMenus={setMenus} />} />
       <Route path="menuDelete" element={<MenuDelete menus={menus} setMenus={setMenus} />} />
     </Route>
-  </Route>
-</Routes>
 
-    {/* <Route path="/stock" element={<Stock stocks={stocks} setStocks={setStocks} />}>
-      <Route index element={<StockRead stocks={stocks} />} />
-      <Route path="stockCreate" element={<StockCreate />} />
-      <Route path="stockUpdate" element={<StockUpdate />} />
-      <Route path="stockDelete" element={<StockDelete />} />
+    <Route path="stock" element={<Stock stocks={stocks} setStocks={setStocks} />}>
+      <Route path="stockRead" element={<StockRead stocks={stocks} />} />
+      <Route path="stockCreate" element={<StockCreate  stocks={stocks} setStocks={setStocks} />} />
+      <Route path="stockUpdate" element={<StockUpdate  stocks={stocks} setStocks={setStocks} />} />
+      <Route path="stockDelete" element={<StockDelete  stocks={stocks} setStocks={setStocks} />} />
     </Route>
+    </Route>
+    </Routes>
 
-    <Route path="/order" element={<Order orders={orders} setOrders={setOrders} />}>
+   {/*  <Route path="/order" element={<Order orders={orders} setOrders={setOrders} />}>
       <Route index element={<OrderRead orders={orders} />} />
       <Route path="orderCreate" element={<OrderCreate />} />
       <Route path="orderUpdate" element={<OrderUpdate />} />
