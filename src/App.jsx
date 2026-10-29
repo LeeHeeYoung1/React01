@@ -14,6 +14,16 @@ import StockRead from './Pages/Stock/StockRead'
 import StockCreate from './Pages/Stock/StockCreate'
 import StockUpdate from './Pages/Stock/StockUpdate'
 import StockDelete from './Pages/Stock/StockDelete'
+import Order from './Pages/Order/Order'
+import OrderRead from './Pages/Order/OrderRead'
+import OrderCreate from './Pages/Order/OrderCreate'
+import OrderUpdate from './Pages/Order/OrderUpdate'
+import OrderDelete from './Pages/Order/OrderDelete'
+import Staff from './Pages/Staff/Staff'
+import StaffRead from './Pages/Staff/StaffRead'
+import StaffCreate from './Pages/Staff/StaffCreate'
+import StaffUpdate from './Pages/Staff/StaffUpdate'
+import StaffDelete from './Pages/Staff/StaffDelete'
 
 
 function App() {
@@ -68,23 +78,22 @@ function App() {
       <Route path="stockUpdate" element={<StockUpdate  stocks={stocks} setStocks={setStocks} />} />
       <Route path="stockDelete" element={<StockDelete  stocks={stocks} setStocks={setStocks} />} />
     </Route>
+    
+    <Route path="staff" element={<Staff staffs={staffs} setStaffs={setStaffs} />}>
+      <Route path='staffRead' element={<StaffRead staffs={staffs} />} />
+      <Route path="staffCreate" element={<StaffCreate staffs={staffs} setStaffs={setStaffs}/>} />
+      <Route path="staffUpdate" element={<StaffUpdate staffs={staffs} setStaffs={setStaffs}/>} />
+      <Route path="staffDelete" element={<StaffDelete staffs={staffs} setStaffs={setStaffs}/>} />
     </Route>
-    </Routes>
-
-   {/*  <Route path="/order" element={<Order orders={orders} setOrders={setOrders} />}>
-      <Route index element={<OrderRead orders={orders} />} />
-      <Route path="orderCreate" element={<OrderCreate />} />
-      <Route path="orderUpdate" element={<OrderUpdate />} />
-      <Route path="orderDelete" element={<OrderDelete />} />
+        
+    <Route path="order" element={<Order orders={orders} setOrders={setOrders} />}>
+      <Route path='orderRead' element={<OrderRead orders={orders} />} />
+      <Route path="orderCreate" element={<OrderCreate orders={orders} setOrders={setOrders}/>} />
+      <Route path="orderUpdate" element={<OrderUpdate orders={orders} setOrders={setOrders}/>} />
+      <Route path="orderDelete" element={<OrderDelete orders={orders} setOrders={setOrders}/>} />
     </Route>
-
-    <Route path="/staff" element={<Staff staffs={staffs} setStaffs={setStaffs} />}>
-      <Route index element={<StaffRead staffs={staffs} />} />
-      <Route path="staffCreate" element={<StaffCreate />} />
-      <Route path="staffUpdate" element={<StaffUpdate />} />
-      <Route path="staffDelete" element={<StaffDelete />} />
-    </Route> */}
-
+  </Route> 
+</Routes>
 
     </>
   )
