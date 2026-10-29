@@ -3,7 +3,7 @@ import './App.css'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login from './Pages/Login/Login'
 import Staff from './Pages/Staff/Staff'
-import DashBoard from './Pages/DashBoard/DashBaord'
+import DashBoard from './Pages/DashBoard/DashBoard'
 
 
 const Order = () => {
@@ -70,8 +70,10 @@ function App() {
           <Route path='order' element={<Order orders={orders} setOrders={setOrders}/>}></Route>
           <Route path='staff' element={<Staff staffs={staffs} setStaffs={setStaffs} />}></Route>
         </Route>
+
+      </Routes>
       
-      <Route path="/dashboard" element={<DashBoard />}></Route>
+      {/* <Route path="/dashboard" element={<DashBoard />}></Route>
       
       <Route path="/menu" element={<Menu />}>
       <Route path="/menuRead" element={<MenuRead />}></Route>
@@ -87,7 +89,7 @@ function App() {
       <Route path="/stockDelete" element={<StockDelete />}></Route>
       </Route>
   
-         <Route path="/order" element={<Oreder />}>
+         <Route path="/order" element={<Order />}>
       <Route path="/orderRead" element={<OrderRead />}></Route>
       <Route path="/orderCreate" element={<OrderCreate />}></Route>
       <Route path="/orderUpdate" element={<OrderUpdate />}></Route>
@@ -99,8 +101,8 @@ function App() {
       <Route path="/staffCreate" element={<StaffCreate />}></Route>
       <Route path="/staffUpdate" element={<StaffUpdate />}></Route>
       <Route path="/staffDelete" element={<StaffDelete />}></Route>
-      </Route>
-      </Routes>
+      </Route> */}
+      
 
     </>
 

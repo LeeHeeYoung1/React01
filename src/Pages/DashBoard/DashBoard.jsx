@@ -1,10 +1,12 @@
 import styles from './DashBoard.module.css';
-import {outlet, Routes, Route} from 'react-router-dom'
+import { Outlet, Routes, Route} from 'react-router-dom'
 
 const DashBoard = () => {
 
   const Index = () => {
-     <div class="content">
+
+    return(
+        <div class="content">
               <table class="manage" border="1">
                 <thead>
                   <tr>
@@ -32,6 +34,8 @@ const DashBoard = () => {
                 </tbody>
               </table>
             </div>
+    )
+     
   }
 
   return(
