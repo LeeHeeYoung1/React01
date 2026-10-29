@@ -12,7 +12,7 @@ const Login = () => {
           <p>매장 관리 시스템 로그인</p>
           <input type='text' placeholder='id를 입력하세요'></input><br></br>
           <input type='password' placeholder='pw를 입력하세요'></input><br></br>
-          <button onClick={()=>{navi("/dashBoard")}}>로그인</button>
+          <button onClick={()=>{navi("/admin")}}>로그인</button>
         </fieldset>
       </div>
   )
