@@ -1,18 +1,28 @@
 import { useState } from 'react'
 import './App.css'
-import { Router, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import Login from './Pages/Login/Login'
+import Staff from './Pages/Staff/Staff'
 
-const Layout = () => {
+const Order = () => {
 
-  return (
-      <div className='container'>
-        <fieldset>
-          <legend>로그인</legend>
-          <input type='text' placeholder='id를 입력하세요'></input>
-          <input type='password' placeholder='pw를 입력하세요'></input>
-          <button>로그인</button>
-        </fieldset>
-      </div>
+  return(
+    <>
+
+    </>
+  )
+}
+
+const Menu = () => {
+  return(
+    <>
+    </>
+  )
+}
+const Stock = () => {
+  return(
+    <>
+    </>
   )
 }
 
@@ -49,9 +59,15 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Route path="/" element="{<Layout />}"></Route>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/dashBoard" element={<DashBoard />}>
+          <Route path='menu' element={<Menu menus={menus} setMenus={setMenus}/>}></Route>
+          <Route path='stock' element={<Stock stocks={stocks} setStocks={setStocks}/>}></Route>
+          <Route path='order' element={<Order orders={orders} setOrders={setOrders}/>}></Route>
+          <Route path='staff' element={<Staff staffs={staffs} setStaffs={setStaffs} />}></Route>
+        </Route>
+      </Routes>
     </>
   )
 }
