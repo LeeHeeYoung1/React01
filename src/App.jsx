@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { Router, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import DashBoard from './Pages/DashBoard/DashBaord'
 
 const Layout = () => {
 
@@ -49,9 +50,40 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Route path="/" element="{<Layout />}"></Route>
-      </Router>
+      <Routes>
+      
+      <Route path="/dashboard" element={<DashBoard />}></Route>
+      
+      <Route path="/menu" element={<Menu />}>
+      <Route path="/menuRead" element={<MenuRead />}></Route>
+      <Route path="/menuCreate" element={<MenuCreate />}></Route>
+      <Route path="/menuUpdate" element={<MenuUpdate />}></Route>
+      <Route path="/menuDelete" element={<MenuDelete />}></Route>
+      </Route>
+
+         <Route path="/stock" element={<Stock />}>
+      <Route path="/stockRead" element={<StockRead />}></Route>
+      <Route path="/stockCreate" element={<StockCreate />}></Route>
+      <Route path="/stockUpdate" element={<StockUpdate />}></Route>
+      <Route path="/stockDelete" element={<StockDelete />}></Route>
+      </Route>
+  
+         <Route path="/order" element={<Oreder />}>
+      <Route path="/orderRead" element={<OrderRead />}></Route>
+      <Route path="/orderCreate" element={<OrderCreate />}></Route>
+      <Route path="/orderUpdate" element={<OrderUpdate />}></Route>
+      <Route path="/orderDelete" element={<OrderDelete />}></Route>
+      </Route>
+
+       <Route path="/staff" element={<Staff />}>
+      <Route path="/staffRead" element={<StaffRead />}></Route>
+      <Route path="/staffCreate" element={<StaffCreate />}></Route>
+      <Route path="/staffUpdate" element={<StaffUpdate />}></Route>
+      <Route path="/staffDelete" element={<StaffDelete />}></Route>
+      </Route>
+      </Routes>
+
+
     </>
   )
 }
