@@ -9,7 +9,7 @@ const Admin = () => {
     <div className={styles.container}>
       <div className={styles.logoutBar}>
         매장 관리 시스템
-        <button>로그아웃</button>
+        <button onClick={() => navi("/")}>로그아웃</button>
       </div>
 
       <div className={styles.bigBox}>
