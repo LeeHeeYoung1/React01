@@ -1,6 +1,6 @@
 import styles from './DashBoard.module.css';
 
-const DashBoard = () => {
+const DashBoard = ({menus, orders, stocks, staffs}) => {
 
   return (
     <div className={styles.content}>
@@ -14,19 +14,19 @@ const DashBoard = () => {
         <tbody>
           <tr>
             <td>메뉴</td>
-            <td>3</td>
+            <td>{menus.length}</td>
           </tr>
           <tr>
             <td>재고</td>
-            <td>5</td>
+            <td>{stocks.length}</td>
           </tr>
           <tr>
             <td>주문</td>
-            <td>4</td>
+            <td>{orders.length}</td>
           </tr>
           <tr>
             <td>직원</td>
-            <td>2</td>
+            <td>{staffs.length}</td>
           </tr>
         </tbody>
       </table>

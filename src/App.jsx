@@ -63,7 +63,7 @@ function App() {
   <Route path="/" element={<Login />} />
 
   <Route path="/admin" element={<Admin />}>
-    <Route path="dashBoard" element={<DashBoard />} />
+    <Route path="dashBoard" element={<DashBoard menus={menus} stocks={stocks} staffs={staffs} orders={orders} />} />
 
     <Route path="menu" element={<Menu menus={menus} setMenus={setMenus} />}>
       <Route path="menuRead" element={<MenuRead menus={menus} />} />
